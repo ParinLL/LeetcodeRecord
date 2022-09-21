@@ -1,8 +1,8 @@
 package main
 
-import (
-	"strings"
-)
+// import (
+// 	"strings"
+// )
 
 func main() {
 	/* Call the function `sayHello` */
@@ -19,29 +19,29 @@ func romanToInt(s string) int {
 		// fmt.Printf("%c\n", symbolbyte)
 		var value int
 
-		switch {
-		case strings.Contains(symbol, "I"):
+		switch symbol {
+		case "I":
 			value = 1
 			if indexOfinput+1 < len(s) && (string(s[indexOfinput+1]) == "V" || string(s[indexOfinput+1]) == "X") {
 				value = -1
 			}
-		case strings.Contains(symbol, "V"):
+		case "V":
 			value = 5
-		case strings.Contains(symbol, "X"):
+		case "X":
 			value = 10
 			if indexOfinput+1 < len(s) && (string(s[indexOfinput+1]) == "L" || string(s[indexOfinput+1]) == "C") {
 				value = -10
 			}
-		case strings.Contains(symbol, "L"):
+		case "L":
 			value = 50
-		case strings.Contains(symbol, "C"):
+		case "C":
 			value = 100
 			if indexOfinput+1 < len(s) && (string(s[indexOfinput+1]) == "D" || string(s[indexOfinput+1]) == "M") {
 				value = -100
 			}
-		case strings.Contains(symbol, "D"):
+		case "D":
 			value = 500
-		case strings.Contains(symbol, "M"):
+		case "M":
 			value = 1000
 		default:
 			value = 0
