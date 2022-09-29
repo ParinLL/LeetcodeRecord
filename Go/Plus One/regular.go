@@ -3,9 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	/* Call the function `sayHello` */
 	lists := []int{1, 2, 3}
-	// plusOne(lists)
 	fmt.Println(plusOne(lists))
 
 }
@@ -30,7 +28,7 @@ func plusOne(digits []int) []int {
 			carry = false
 			continue
 		}
-		// 多重進位
+		// 傳遞到下個進位
 		if carry == true && digits[i] == 9 {
 			newarray = append(newarray, 0)
 			carry = true
